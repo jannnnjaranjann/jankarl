@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jan Karl Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #ffffff, #0d1b4c);
+      color: #0d1b4c;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    header .logo {
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: #0d1b4c;
+    }
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #0d1b4c;
+      font-weight: 400;
+      transition: color .3s;
+    }
+    nav a:hover { color: #3a6fff; }
+
+    section {
+      padding: 100px 80px;
+      min-height: 100vh;
+      position: relative;
+    }
+    h2 {
+      font-size: 28px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #0d1b4c;
+      margin: 10px auto 0;
+      animation: slideLine 3s infinite alternate;
+    }
+    @keyframes slideLine {
+      from {width: 40px;}
+      to {width: 120px;}
+    }
+
+    /* Intro */
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+    }
+    .intro img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .intro-text h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+    .intro-text p {
+      margin-bottom: 25px;
+    }
+    .btn {
+      background: #0d1b4c;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all .3s;
+    }
+    .btn:hover {background: #3a6fff; transform: scale(1.05);}
+
+    /* Portfolio */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      transition: transform .5s ease, box-shadow .5s ease;
+    }
+    .grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Platforms */
+    .platforms {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .platforms img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      background: transparent;
+      transition: all .3s;
+    }
+    .platforms img:hover { transform: scale(1.1); }
+
+    /* Gallery (small photos) */
+    .gallery {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: transform .3s;
+    }
+    .gallery img:hover { transform: scale(1.1); }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .socials a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px;
+      border-radius: 50%;
+      background: #0d1b4c;
+      color: #fff;
+      transition: all .3s;
+    }
+    .socials a:hover {
+      background: #3a6fff;
+      transform: scale(1.1);
+    }
+    .socials svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #0d1b4c;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">JK</div>
+    <nav>
+      <a href="#intro">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="intro" class="intro">
+    <img src="ME_JAN_KARL/5af04fa4-dd06-4ded-bb80-c7b5750e028b.jpg" alt="Jan Karl">
+    <div class="intro-text">
+      <h1>Hi, I’m Jan Karl</h1>
+      <p>A detail-oriented professional with experience in HR, email marketing, customer service, and social media management. I create meaningful strategies that connect brands with people while ensuring smooth and efficient execution.</p>
+      <a href="#portfolio" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>PORTFOLIO</h2>
+    <div class="grid">
+      <img src="OUTPUTS/1.png" alt="Work 1">
+      <img src="OUTPUTS/2.png" alt="Work 2">
+      <img src="OUTPUTS/3.png" alt="Work 3">
+      <img src="OUTPUTS/12.png" alt="Work 4">
+      <img src="OUTPUTS/17.png" alt="Work 5">
+      <img src="OUTPUTS/6e7faa46-4467-4238-bdba-0cf3d918823f.jpg" alt="Work 6">
+      <img src="OUTPUTS/1a06a183-b754-4ecc-9852-12466e54bc1f.jpg" alt="Work 7">
+      <img src="OUTPUTS/e84cc34a-adc7-48f9-82c1-93eb5c98dc36.jpg" alt="Work 8">
+      <img src="OUTPUTS/Fuel Your Hustle. Build Your Credit..png" alt="Work 9">
+      <img src="OUTPUTS/Fuel Your Hustle. Build Your Credit..gif" alt="Work 10">
+      <img src="OUTPUTS/Tree Diversity and Community Structure of Riparian Trees along Macasandig Boulevard, Cagayan de Oro River, Cagayan de Oro City.png" alt="Work 11">
+    </div>
+  </section>
+
+  <section id="platforms">
+    <h2>PLATFORMS</h2>
+    <div class="platforms">
+      <img src="PLATFORMS/FB.png" alt="Facebook">
+      <img src="PLATFORMS/IG.jpg" alt="Instagram">
+      <img src="PLATFORMS/X_logo.jpg" alt="Twitter/X">
+      <img src="PLATFORMS/tiktok.jpg" alt="TikTok">
+      <img src="PLATFORMS/capcut.png" alt="CapCut">
+      <img src="PLATFORMS/adobe.jpg" alt="Adobe">
+      <img src="PLATFORMS/gsuite-logo.jpg" alt="G Suite">
+      <img src="PLATFORMS/TRELLO.jpg" alt="Trello">
+      <img src="PLATFORMS/Notion-Logo.png" alt="Notion">
+      <img src="PLATFORMS/GHL.png" alt="GoHighLevel">
+      <img src="PLATFORMS/ChatGPT-Logo.svg.png" alt="ChatGPT">
+      <img src="PLATFORMS/copilot.png" alt="Copilot">
+      <img src="PLATFORMS/Gemini-Logo.png" alt="Gemini">
+      <img src="PLATFORMS/perplexity.png" alt="Perplexity">
+      <img src="PLATFORMS/opus.png" alt="Opus">
+      <img src="PLATFORMS/Screenshot 2025-10-03 000224.png" alt="Screenshot1">
+      <img src="PLATFORMS/Screenshot 2025-10-03 000748.png" alt="Screenshot2">
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>GALLERY</h2>
+    <div class="gallery">
+      <img src="ME_JAN_KARL/48ad4167-f8c6-487d-933f-42f091419a31.jpg" alt="Photo 1">
+      <img src="ME_JAN_KARL/8c865ff4-8122-4633-b95b-f524d4db9ca4.jpg" alt="Photo 2">
+      <img src="ME_JAN_KARL/471a46bb-3c3a-4a18-91a7-8703b284075b.jpg" alt="Photo 3">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>CONTACT</h2>
+    <div class="contact">
+      <p>Let’s connect! Find me on:</p>
+      <div class="socials">
+        <a href="https://web.facebook.com/jannnjaranjann/" target="_blank" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.507 1.493-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12"></path></svg>
+        </a>
+        <a href="https://www.instagram.com/jannnjaranjann/" target="_blank" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.75-.88a1.13 1.13 0 1 1-2.25 0 1.13 1.13 0 0 1 2.25 0z"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/pague-jan-karl-malone-5337a3281/" target="_blank" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.452 20.452h-3.555v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.477-.9 1.637-1.852 3.37-1.852 3.605 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.911 20.452H3.76V9h3.151v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jan Karl. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Fade-in effect on scroll
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, {threshold: 0.1});
+
+    sections.forEach(sec => {
+      sec.style.opacity = 0;
+      sec.style.transform = 'translateY(50px)';
+      sec.style.transition = 'all 1s ease';
+      observer.observe(sec);
+    });
+  </script>
+</body>
+</html>
